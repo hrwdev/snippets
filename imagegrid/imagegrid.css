@@ -134,6 +134,7 @@
   font-weight: bold;
   font-size: 14pt;
   overflow: scroll;
+  scrollbar-width: none;
   opacity: 0;
 }
 
