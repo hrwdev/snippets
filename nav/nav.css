@@ -76,7 +76,7 @@ main {
 }
 
 /**
- * mobile:
+ * mobile: turn entire navbar into a fixed overlay when #nav-sections is open
  */
 @media (max-width: 1024px) {
   #navbar:has(#nav-sections[open]) {
