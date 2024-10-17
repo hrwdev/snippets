@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Mask: #WithHumanity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="stylesheet" href="../global.css"/>
+  <link rel="stylesheet" href="mask.css"/>
+
+  <style>
+    p {line-height: 5;}
+  </style>
+</head>
+<body>
+
+<main style="max-width: 1000px; margin-inline: auto;">
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae dui eget dolor dictum luctus ac eget orci.
+    Vivamus vitae leo dui. Ut imperdiet luctus lectus, et convallis felis pulvinar ac. Vivamus eu magna non augue lacini
+    dignissim ac ac augue. Vestibulum cursus lacus at nibh convallis vulputate. Duis sed lobortis ipsum. Phasellus
+    rhoncus nulla urna, id lacinia enim consequat in. Duis gravida condimentum nisl sit amet hendrerit.</p>
+  <p>Vivamus quis est sed leo cursus scelerisque. Pellentesque tincidunt ut lectus sit amet porttitor. Curabitur id leo
+    faucibus, maximus diam id, dictum magna. Fusce ante lorem, posuere et urna vitae, malesuada placerat velit. Nulla
+    imperdiet est risus, efficitur tempor lectus euismod sit amet. In tincidunt purus eget tristique sollicitudin.
+    Vivamus fringilla, <a href="#">erat eget facilisis faucibus</a>, mauris arcu pellentesque nisl, convallis lobortis
+    lacus quam eget diam. Sed aliquet euismod ex, eget egestas dolor fringilla non. Phasellus imperdiet aliquam metus,
+    at malesuada nibh mattis quis.</p>
+
+  <h2 id="heading-whats">What's Happening?</h2>
+
+  <div id="whats">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="filter: blur(7px);">
+<!--      <rect width="100%" height="100%" fill="#e5e5e5"/>-->
+      <image xmlns:xlink="http://www.w3.org/1999/xlink"
+             xlink:href="text.svg" width="100%" height="100%"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <clipPath id="mask">
+          <circle id="circle-left"  class="mask-circle" cx="280" cy="50%" r="280" style="fill: #ffffff"/>
+          <circle id="circle-right" class="mask-circle" cx="720" cy="50%" r="280" style="fill: #ffffff"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#mask)">
+        <rect width="100%" height="100%" fill="white"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="text.svg" width="100%" height="100%"/>
+      </g>
+    </svg>
+  </div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae dui eget dolor dictum luctus ac eget orci.
+    Vivamus vitae leo dui. Ut imperdiet luctus lectus, et convallis felis pulvinar ac. Vivamus eu magna non augue lacini
+    dignissim ac ac augue. Vestibulum cursus lacus at nibh convallis vulputate. Duis sed lobortis ipsum. Phasellus
+    rhoncus nulla urna, id lacinia enim consequat in. Duis gravida condimentum nisl sit amet hendrerit.</p>
+  <p>Vivamus quis est sed leo cursus scelerisque. Pellentesque tincidunt ut lectus sit amet porttitor. Curabitur id leo
+    faucibus, maximus diam id, dictum magna. Fusce ante lorem, posuere et urna vitae, malesuada placerat velit. Nulla
+    imperdiet est risus, efficitur tempor lectus euismod sit amet. In tincidunt purus eget tristique sollicitudin.
+    Vivamus fringilla, <a href="#">erat eget facilisis faucibus</a>, mauris arcu pellentesque nisl, convallis lobortis
+    lacus quam eget diam. Sed aliquet euismod ex, eget egestas dolor fringilla non. Phasellus imperdiet aliquam metus,
+    at malesuada nibh mattis quis.</p>
+  <p>Nullam pulvinar ornare urna. Donec sagittis nisi leo, eu elementum nisl pulvinar eget. Quisque porttitor, ligula
+    id dictum cursus, mi purus mattis nisl, vel aliquam eros nibh ut quam. In porttitor leo lectus, ac fermentum lectus
+    facilisis quis.</p>
+</main>
+
+</footer>
+<script src="mask.js"></script>
+
+</body>
+</html>
