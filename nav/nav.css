@@ -1,0 +1,194 @@
+#navbar {
+  --nav-height: 2.333rem;
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  padding-top: 3rem;
+}
+
+#sections-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: var(--nav-height);
+  width: var(--nav-height);
+  padding-inline: 0.5rem;
+  background-color: var(--beige);
+  list-style: none;
+  line-height: 0;
+}
+
+.icon-menu {
+  display: inline-block;
+}
+
+.icon-close {
+  display: none;
+}
+
+[open] .icon-menu {
+  display: none;
+}
+
+[open] .icon-close {
+  display: inline-block;
+}
+
+#sections-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sections-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid black;
+  width: fit-content;
+  height: var(--nav-height);
+}
+
+#sections-list a {
+  transition: 0.25s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-inline: 1rem;
+  background-color: var(--beige);
+  color: var(--black);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#sections-list a:hover {
+  background-color: var(--black);
+  color: var(--beige);
+}
+
+/**
+ * mobile:
+ */
+@media (max-width: 1024px) {
+  #navbar:has(#nav-sections[open]) {
+    position: fixed;
+    inset: 0 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0.5rem;
+    background: #F0EBE2EE;
+  }
+
+  #sections-toggle {
+    position: relative;
+  }
+
+  #sections-list {
+    position: absolute;
+    flex-direction: column;
+  }
+
+  #sections-list li {
+    margin-block-start: -1px;
+  }
+}
+
+/**
+ * desktop:
+ */
+@media (min-width: 1024.01px) {
+  #nav-sections {
+    min-width: var(--nav-height);
+  }
+  #sections-toggle {
+    position: absolute;
+  }
+
+  #sections-list {
+    padding-left: var(--nav-height);
+  }
+
+  #sections-list li {
+    margin-inline-start: -1px;
+  }
+}
+
+#nav-languages {
+
+}
+
+.language {
+  display: inline-flex;
+  align-items: center;
+  padding-inline-start: 2rem;
+  background-position: 0.25rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.language-de {
+  background-image: url("https://features.hrw.org/features/features/lgbt_laws/images/flags/world/de.png");
+}
+
+.language-en {
+  background-image: url("https://features.hrw.org/features/features/lgbt_laws/images/flags/world/gb.png");
+}
+
+.language-es {
+  background-image: url("https://features.hrw.org/features/features/lgbt_laws/images/flags/world/es.png");
+}
+
+.language-fr {
+  background-image: url("https://features.hrw.org/features/features/lgbt_laws/images/flags/world/fr.png");
+}
+
+.language-it {
+  background-image: url("https://features.hrw.org/features/features/lgbt_laws/images/flags/world/it.png");
+}
+
+.language-sv {
+  background-image: url("https://features.hrw.org/features/features/lgbt_laws/images/flags/world/sv.png");
+}
+
+
+#languages-toggle {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+#languages-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  margin-inline-start: -0.5rem;
+  outline: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+#languages-list li {
+  transition: 0.25s background-color;
+  list-style: none;
+  background: var(--beige);
+  padding: 0.25rem 0.5rem;
+}
+
+#languages-list li:hover {
+  background: #fff;
+}
+
+#languages-list a {
+  list-style: none;
+  color: var(--black);
+}
