@@ -1,0 +1,164 @@
+.imagegrid {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  gap: 15px;
+  background-color: #001F35;
+}
+
+@media (max-width: 640px) {
+  .imagegrid {
+    padding: 15px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+  }
+  .imagegrid :nth-child(4) ~ .imagecard {
+    display: none;
+  }
+  .imagecard {
+    width: 100%;
+    aspect-ratio: 5/3;
+  }
+}
+
+@media (min-width: 640.01px) and (max-width: 960px) {
+  .imagegrid {
+    padding: 30px;
+    aspect-ratio: 2/2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "a b"
+    "a b"
+    "c b"
+    "c d"
+    "c d";
+  }
+  .imagegrid :nth-child(4) ~ .imagecard {
+    display: none;
+  }
+}
+
+@media (min-width: 960.01px) and (max-width: 1280px) {
+  .imagegrid {
+    padding: 30px;
+    aspect-ratio: 3/2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+    "a b c"
+    "a b c"
+    "d b e"
+    "d g e"
+    "f g h"
+    "f g h";
+  }
+}
+
+@media (min-width: 1280.01px) {
+  .imagegrid {
+    padding: 60px 30px;
+    aspect-ratio: 3/2;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "a b c d"
+    "a b c d"
+    "e b g d"
+    "e f g h"
+    "e f g h";
+  }
+}
+.imagegrid :nth-child(1) {
+  grid-area: a;
+}
+
+.imagegrid :nth-child(2) {
+  grid-area: b;
+}
+
+.imagegrid :nth-child(3) {
+  grid-area: c;
+}
+
+.imagegrid :nth-child(4) {
+  grid-area: d;
+}
+
+.imagegrid :nth-child(5) {
+  grid-area: e;
+}
+
+.imagegrid :nth-child(6) {
+  grid-area: f;
+}
+
+.imagegrid :nth-child(7) {
+  grid-area: g;
+}
+
+.imagegrid :nth-child(8) {
+  grid-area: h;
+}
+
+.imagecard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.imagecard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imagecard blockquote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f6691c;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14pt;
+  overflow: scroll;
+  opacity: 0;
+}
+
+.imagecard blockquote > * {
+  margin: 0;
+  padding: 0;
+}
+
+.imagecard:hover blockquote,
+.imagecard blockquote:focus {
+  transition: 0.25s opacity;
+  opacity: 0.9;
+}
+
+.cover-top {
+  object-fit: cover;
+  object-position: top;
+}
+
+.cover-center {
+  object-fit: cover;
+  object-position: center;
+}
+
+.cover-bottom {
+  object-fit: cover;
+  object-position: bottom;
+}
