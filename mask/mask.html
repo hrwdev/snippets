@@ -28,26 +28,32 @@
 
   <h2 id="heading-whats">What's Happening?</h2>
 
-  <div id="whats">
-    <p class="sr-only">Frontex has the responsibility and capability to ensure the safety of people in danger at sea.</p>
-    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="filter: blur(7px);">
+  <div id="mask-container">
+    <p class="sr-only">Over 30,000 people seeking safety, or a better life have died or disappeared in the Mediterranean over the past decade.</p>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="filter: blur(8px);">
 <!--      <rect width="100%" height="100%" fill="#e5e5e5"/>-->
-      <image xmlns:xlink="http://www.w3.org/1999/xlink"
-             xlink:href="text.svg" width="100%" height="100%"/>
+      <image class="text-desktop" xmlns:xlink="http://www.w3.org/1999/xlink"
+             xlink:href="text-desktop.svg" width="100%" height="100%"/>
+      <image class="text-mobile" xmlns:xlink="http://www.w3.org/1999/xlink"
+             xlink:href="text-mobile.svg" width="100%" height="100%"/>
     </svg>
 
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <clipPath id="mask">
-          <circle id="circle-left"  class="mask-circle" cx="280" cy="50%" r="280" style="fill: #ffffff"/>
-          <circle id="circle-right" class="mask-circle" cx="720" cy="50%" r="280" style="fill: #ffffff"/>
+          <circle id="circle-left"  class="mask-circle" cx="200" cy="50%" r="180" />
+          <circle id="circle-right" class="mask-circle" cx="550" cy="50%" r="180" />
         </clipPath>
       </defs>
       <g clip-path="url(#mask)">
         <rect width="100%" height="100%" fill="white"/>
-        <image xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:href="text.svg" width="100%" height="100%"/>
+        <image class="text-desktop" xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="text-desktop.svg" width="100%" height="100%"/>
+        <image class="text-mobile" xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="text-mobile.svg" width="100%" height="100%"/>
       </g>
+      <circle id="outline-left" class="mask-outline" cx="200" cy="50%" r="180" />
+      <circle id="outline-right" class="mask-outline" cx="550" cy="50%" r="180" />
     </svg>
   </div>
 

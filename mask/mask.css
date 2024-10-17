@@ -1,11 +1,36 @@
-#whats {
+#mask-container {
   position: relative;
-  height: 500px;
+  max-width: 750px;
+  margin-inline: auto;
 }
 
-#whats svg {
+#mask-container svg {
   position: absolute;
   width: 100%;
   height: 100%;
   inset: 0 0 0 0;
+}
+
+.mask-outline {
+  stroke: var(--black);
+  fill: transparent;
+  stroke-width: 0.5;
+}
+
+@media (max-width: 600px) {
+  #mask-container {
+    aspect-ratio: 2/3;
+  }
+  .text-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 600.01px) {
+  #mask-container {
+    aspect-ratio: 3/2;
+  }
+  .text-mobile {
+    display: none;
+  }
 }
